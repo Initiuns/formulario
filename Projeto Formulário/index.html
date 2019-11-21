@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Formulário de Dados Cadastrais</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+  <link rel='stylesheet' type="text/css" media='screen' href='css/alter.css'>
+  <script src='js/bootstrap.min.js'></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>
+    body {
+      background: rgb(57, 228, 142);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <form id="forms" action=""name="cadastro" method="post" style="width: 50%; margin: auto;margin-top: 10%;color: rgb(57, 228, 142)" class="main-form needs-validation"
+    novalidate>
+
+    <h4 class="display-5">Dados Cadastrais</h4>
+
+    <container class="nome">
+      <div class="form-group">
+        <label for="nNome">Nome</label>
+        <input type="text" class="form-control" id="nNome validationServer055" aria-describedat="nomeAjuda" placeholder="Digite seu Nome"
+          autocomplete="off" autofocus required>
+        <div class="invalid-feedback">Ops! Esqueceu seu nome.</div>
+        <div class="valid-feedback">Nome legal!</div>
+      </div>
+    </container>
+
+    <container class="email">
+      <div class="form-group">
+        <label for="nEmail">Email</label>
+        <input type="email" class="form-control" id="nEmail" aria-describedat="emailAjuda"
+          placeholder="Digite seu Email" autocomplete="off" required>
+          <div class="invalid-feedback">Falta alguma coisa no seu email.</div>
+          <div class="valid-feedback">Show!</div>
+      </div>
+    </container>
+
+    <container class="data-nascimento, cpf e genero">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="DateN">Data de Nascimento</label>
+            <input type="text" name="DateN" id="DateN" class="form-control date-mask" autocomplete="off"
+              placeholder="Ex: dd/mm/aaaa" required />
+            <div class="invalid-feedback">Data de nascimento inválida</div>
+            <div class="valid-feedback">Show!</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" class="form-control cpf-mask" maxlength="11" autocomplete="off"
+              placeholder="Ex: 000.000.000-00" required />
+            <div class="invalid-feedback">CPF inválido</div>
+            <div class="valid-feedback">Show!</div>
+          </div>
+        </div>
+
+        <div class="col needs-validation">
+          <p>Gênero</p>
+
+          <div class="custom-control custom-radio ">
+              <input type="radio" id="gender" name="customRadio" class="custom-control-input" value="male">
+              <label class="custom-control-label" for="gender">Masculino</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="gender2" name="customRadio" class="custom-control-input" value="female">
+              <label class="custom-control-label" for="gender2">Feminino</label>
+            </div>
+
+            <div class="invalid-feedback">Selecione um dos gêneros</div>
+          
+        </div>
+      </div>
+    </container>
+
+    <container class="senha">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="senha">Senha (6 caracteres no mínimo):</label>
+            <input type="password" name="senha" id="senha" class="form-control" required minlength="6" />
+            <div class="invalid-feedback">Insira uma senha válida</div>
+            <div class="valid-feedback">Show!</div>
+          </div>
+        </div>
+          <div class="col">
+            <div class="form-group">
+                <label for="confsenha">Confirmação de Senha</label>
+                <input type="password" name="confsenha" id="confsenha" class="form-control" required minlength="6" />
+                <div class="invalid-feedback">Insira uma senha válida</div>
+                <div class="valid-feedback">Show!</div>
+            </div>
+          </div>
+      </div>
+    </container>
+
+    <container class="botoes">
+      <div class="row justify-content-end">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <div class="col-auto m-lg-auto">
+            <button type="submit" class="btn btn-outline-success vai">Enviar</button>
+          </div>
+          <div class="col-auto m-lg-auto">
+            <button id="cancelar" class="btn btn-outline-danger vai cadastro">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </container>
+  </form>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script src="js/validador_cpf.js"></script>
+
+</body>
+
+</html>
